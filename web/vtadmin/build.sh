@@ -60,9 +60,6 @@ npm --prefix "$web_dir" --silent install
 
 export PATH=$PATH:$web_dir/node_modules/.bin/
 
-vite_vtadmin_api_address="http://${case_insensitive_hostname}:${vtadmin_api_port}"
-output "\n\033[1;32mSetting VITE_VTADMIN_API_ADDRESS to \"${vite_vtadmin_api_address}\"\033[0m"
-
-VITE_VTADMIN_API_ADDRESS="http://${case_insensitive_hostname}:${vtadmin_api_port}" \
+VITE_VTADMIN_API_ADDRESS="" \
   VITE_ENABLE_EXPERIMENTAL_TABLET_DEBUG_VARS="true" \
   npm run --prefix "$web_dir" build
